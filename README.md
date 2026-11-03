@@ -1,4 +1,34 @@
+<div align="center">
+
 # Thai Clinical PII Redactor
+
+**Privacy-first redaction of personal data in synthetic Thai clinical documents.**
+
+![Status prototype](https://img.shields.io/badge/Status-prototype-F59E0B?style=for-the-badge) ![Data synthetic only](https://img.shields.io/badge/Data-synthetic_only-2ea44f?style=for-the-badge) ![License MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge) ![Implementation private](https://img.shields.io/badge/Implementation-private-lightgrey?style=for-the-badge)
+
+</div>
+
+> Public documentation only. The implementation stays private during prototype hardening, and this is not a production medical system or a PDPA certification.
+
+## Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py&perline=10" alt="Tech stack" />
+</p>
+
+## Pipeline
+
+```mermaid
+flowchart LR
+    A["Synthetic document image"] --> B["OCR adapter\ntext regions + boxes"]
+    B --> C["Deterministic PII detectors\nThai ID (checksum), phone,\nHN/AN, labelled DOB and names"]
+    C --> D["Redactor\nopaque black boxes"]
+    D --> E[("Audit record\nmetadata only")]
+    C -- "no region detected" --> H{{"Mandatory\nhuman review"}}
+    D --> O["Redacted output"]
+```
+
+---
 
 > A clean-room, privacy-first prototype for redacting personally identifiable information from synthetic Thai clinical documents.
 
@@ -39,4 +69,3 @@ The current prototype covers Thai national IDs with checksum validation, Thai ph
 ## Disclosure
 
 Please do not submit real patient documents to this prototype. For security or privacy concerns, contact the repository owner privately instead of opening an issue containing sensitive data.
-
