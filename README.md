@@ -1,4 +1,16 @@
+<div align="center">
+
 # Thai Clinical PII Redactor
+
+**Privacy-first redaction of personal data in synthetic Thai clinical documents.**
+
+![Status prototype](https://img.shields.io/badge/Status-prototype-F59E0B?style=for-the-badge) ![Data synthetic only](https://img.shields.io/badge/Data-synthetic_only-2ea44f?style=for-the-badge) ![License MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge) ![Implementation private](https://img.shields.io/badge/Implementation-private-lightgrey?style=for-the-badge)
+
+</div>
+
+> Public documentation only. The implementation stays private during prototype hardening, and this is not a production medical system or a PDPA certification.
+
+---
 
 > A clean-room, privacy-first prototype for redacting personally identifiable information from synthetic Thai clinical documents.
 
@@ -39,4 +51,3 @@ The current prototype covers Thai national IDs with checksum validation, Thai ph
 ## Disclosure
 
 Please do not submit real patient documents to this prototype. For security or privacy concerns, contact the repository owner privately instead of opening an issue containing sensitive data.
-
