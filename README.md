@@ -10,24 +10,6 @@
 
 > Public documentation only. The implementation stays private during prototype hardening, and this is not a production medical system or a PDPA certification.
 
-## Tech stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=py&perline=10" alt="Tech stack" />
-</p>
-
-## Pipeline
-
-```mermaid
-flowchart LR
-    A["Synthetic document image"] --> B["OCR adapter\ntext regions + boxes"]
-    B --> C["Deterministic PII detectors\nThai ID (checksum), phone,\nHN/AN, labelled DOB and names"]
-    C --> D["Redactor\nopaque black boxes"]
-    D --> E[("Audit record\nmetadata only")]
-    C -- "no region detected" --> H{{"Mandatory\nhuman review"}}
-    D --> O["Redacted output"]
-```
-
 ---
 
 > A clean-room, privacy-first prototype for redacting personally identifiable information from synthetic Thai clinical documents.
